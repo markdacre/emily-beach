@@ -1,0 +1,1603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Emily Thibodeau · Certified Trainer · Bay Area</title>
+    <meta
+      name="description"
+      content="Certified personal trainer and recovery specialist in the Bay Area. In-person studio sessions and online coaching for every body."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,400..700,0;9..144,400..700,1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ====== BEACH TOKENS ====== */
+      :root {
+        --sand-50: #fbf7f0;
+        --sand-100: #f5ecdd;
+        --sand-200: #efe3cf;
+        --sand-300: #e5d5b8;
+
+        --drift-100: #e3d7c1;
+        --drift-200: #c7b59b;
+        --drift-400: #8a7a64;
+        --drift-600: #5e5242;
+        --drift-900: #3a3328;
+
+        --coral-100: #fadccf;
+        --coral-300: #f0b49f;
+        --coral-500: #e89078;
+        --coral-600: #d4755a;
+        --coral-700: #a85438;
+
+        --rose-100: #f5dde2;
+        --rose-400: #d98ba0;
+        --rose-600: #a85e73;
+
+        --foam-100: #d9e7e2;
+        --foam-500: #8fb8ae;
+        --foam-700: #517068;
+
+        --sun-200: #f7e4b4;
+        --sun-400: #e8c878;
+
+        --fg-default: var(--drift-900);
+        --fg-muted: var(--drift-400);
+        --fg-subtle: var(--drift-200);
+        --fg-onDark: var(--sand-50);
+        --fg-link: var(--rose-600);
+        --bg-page: var(--sand-100);
+        --bg-raised: var(--sand-50);
+        --bg-sunken: var(--sand-200);
+        --border-default: var(--drift-100);
+
+        --gradient-horizon: linear-gradient(
+          180deg,
+          #f5ecdd 0%,
+          #fadccf 55%,
+          #f0b49f 100%
+        );
+        --gradient-sunrise: linear-gradient(
+          135deg,
+          #fbf7f0 0%,
+          #f5e5d0 40%,
+          #f0b49f 100%
+        );
+
+        --font-display: "Fraunces", "Georgia", serif;
+        --font-body: "DM Sans", -apple-system, system-ui, sans-serif;
+
+        --fs-eyebrow: 13px;
+        --fs-small: 15px;
+        --fs-body: 17px;
+        --fs-body-lg: 19px;
+        --fs-h4: 22px;
+        --fs-h3: clamp(26px, 2.2vw, 32px);
+        --fs-h2: clamp(36px, 4vw, 56px);
+        --fs-h1: clamp(48px, 6.2vw, 88px);
+
+        --lh-tight: 1.02;
+        --lh-snug: 1.15;
+        --lh-normal: 1.45;
+        --lh-relaxed: 1.6;
+
+        --s-1: 4px;
+        --s-2: 8px;
+        --s-3: 12px;
+        --s-4: 16px;
+        --s-5: 20px;
+        --s-6: 24px;
+        --s-8: 32px;
+        --s-10: 40px;
+        --s-12: 48px;
+        --s-16: 64px;
+        --s-20: 80px;
+        --s-24: 96px;
+        --s-32: 128px;
+
+        --gutter-desktop: 48px;
+        --gutter-tablet: 32px;
+        --gutter-mobile: 20px;
+        --content-max: 1240px;
+        --reading-max: 640px;
+
+        --r-sm: 8px;
+        --r-md: 16px;
+        --r-lg: 28px;
+        --r-xl: 40px;
+        --r-pill: 999px;
+
+        --shadow-1: 0 1px 2px rgba(90, 66, 40, 0.08);
+        --shadow-2: 0 14px 32px -14px rgba(90, 66, 40, 0.18);
+        --shadow-3: 0 28px 56px -20px rgba(168, 94, 115, 0.22);
+
+        --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+        --dur-sm: 180ms;
+        --dur-md: 320ms;
+        --dur-lg: 600ms;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg-page);
+        color: var(--fg-default);
+        font-family: var(--font-body);
+        font-size: var(--fs-body);
+        line-height: var(--lh-normal);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-display);
+        color: var(--fg-default);
+        margin: 0;
+        text-wrap: balance;
+        font-variation-settings:
+          "opsz" 96,
+          "SOFT" 50;
+      }
+      h1 {
+        font-size: var(--fs-h1);
+        font-weight: 400;
+        line-height: 1.06;
+        letter-spacing: -0.025em;
+        font-variation-settings:
+          "opsz" 144,
+          "SOFT" 100;
+      }
+      h2 {
+        font-size: var(--fs-h2);
+        font-weight: 450;
+        line-height: var(--lh-tight);
+        letter-spacing: -0.02em;
+        font-variation-settings:
+          "opsz" 96,
+          "SOFT" 80;
+      }
+      h3 {
+        font-size: var(--fs-h3);
+        font-weight: 500;
+        line-height: var(--lh-snug);
+        letter-spacing: -0.015em;
+        font-variation-settings:
+          "opsz" 48,
+          "SOFT" 50;
+      }
+      h4 {
+        font-size: var(--fs-h4);
+        font-weight: 500;
+        line-height: var(--lh-snug);
+        font-variation-settings: "opsz" 24;
+      }
+      p {
+        font-size: var(--fs-body);
+        line-height: var(--lh-relaxed);
+        margin: 0 0 var(--s-4);
+        max-width: var(--reading-max);
+        text-wrap: pretty;
+      }
+      small,
+      .small {
+        font-size: var(--fs-small);
+        color: var(--fg-muted);
+      }
+      a {
+        color: var(--fg-link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+        transition: text-decoration-thickness var(--dur-sm) var(--ease-out);
+      }
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+
+      .eyebrow {
+        font-family: var(--font-body);
+        font-size: var(--fs-eyebrow);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--coral-600);
+        display: inline-block;
+        margin: 0 0 var(--s-3);
+      }
+
+      .container {
+        max-width: var(--content-max);
+        margin: 0 auto;
+        padding: 0 var(--gutter-desktop);
+      }
+      @media (max-width: 900px) {
+        .container {
+          padding: 0 var(--gutter-tablet);
+        }
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 0 var(--gutter-mobile);
+        }
+      }
+
+      /* ====== BUTTONS ====== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--s-2);
+        font-family: var(--font-body);
+        font-size: var(--fs-body);
+        font-weight: 500;
+        line-height: 1;
+        padding: 16px 26px;
+        border-radius: var(--r-pill);
+        border: 1.5px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        white-space: nowrap;
+        transition:
+          background var(--dur-sm) var(--ease-out),
+          color var(--dur-sm) var(--ease-out),
+          border-color var(--dur-sm) var(--ease-out),
+          transform 80ms var(--ease-out);
+      }
+      .btn:active {
+        transform: scale(0.98);
+      }
+      .btn:focus-visible {
+        outline: 2px solid var(--coral-500);
+        outline-offset: 3px;
+      }
+      .btn-primary {
+        background: var(--coral-500);
+        color: var(--sand-50);
+      }
+      .btn-primary:hover {
+        background: var(--coral-600);
+      }
+      .btn-secondary {
+        background: transparent;
+        color: var(--drift-900);
+        border-color: var(--drift-200);
+      }
+      .btn-secondary:hover {
+        background: var(--sand-50);
+        border-color: var(--drift-400);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--drift-900);
+        padding: 12px 16px;
+      }
+      .btn-ghost:hover {
+        color: var(--coral-600);
+      }
+
+      /* ====== Chips ====== */
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--s-2);
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: var(--r-pill);
+        background: var(--sand-50);
+        color: var(--drift-600);
+        border: 1px solid var(--border-default);
+      }
+
+      /* Sun disc */
+      .sun {
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        border-radius: 999px;
+        background: radial-gradient(
+          circle at 50% 50%,
+          var(--sun-200) 0%,
+          rgba(247, 228, 180, 0.55) 45%,
+          rgba(247, 228, 180, 0) 72%
+        );
+        filter: blur(4px);
+        pointer-events: none;
+      }
+
+      /* Wavy divider */
+      .wave-divider {
+        display: block;
+        width: 100%;
+        height: 48px;
+        color: var(--sand-100);
+      }
+
+      /* ====== NAV ====== */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition:
+          background 0.32s var(--ease-out),
+          border-color 0.32s var(--ease-out);
+      }
+      .nav.scrolled {
+        background: rgba(251, 247, 240, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--drift-100);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 76px;
+      }
+      .nav-logo {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+      }
+      .nav-links a {
+        color: var(--drift-600);
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .nav-links a:hover {
+        color: var(--drift-900);
+      }
+      @media (max-width: 800px) {
+        .nav-links > a:not(.btn) {
+          display: none;
+        }
+      }
+
+      /* ====== HERO ====== */
+      .hero {
+        position: relative;
+        padding: var(--s-10) 0 var(--s-24);
+        background: var(--gradient-horizon);
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: var(--s-16);
+        align-items: center;
+        position: relative;
+      }
+      .hero h1 em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--rose-600);
+      }
+      .hero-sub {
+        margin-top: 36px;
+        font-size: 19px;
+        line-height: 1.55;
+        color: var(--drift-600);
+        max-width: 540px;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 12px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 40px;
+        margin-top: 56px;
+        color: var(--drift-400);
+        font-size: 14px;
+        border-top: 1px solid var(--drift-100);
+        padding-top: 24px;
+      }
+      .hero-stats strong {
+        display: block;
+        color: var(--drift-900);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 26px;
+        margin-bottom: 2px;
+        letter-spacing: -0.01em;
+      }
+
+      .hero-photo-stack {
+        position: relative;
+      }
+      .hero-photo-frame {
+        position: relative;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-3);
+        transform: rotate(-1.2deg);
+        background: var(--sand-50);
+      }
+      .hero-photo-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(232, 200, 120, 0.08) 0%,
+          rgba(232, 144, 120, 0.08) 100%
+        );
+        pointer-events: none;
+      }
+      .hero-photo-frame img {
+        display: block;
+        width: 100%;
+        height: 580px;
+        object-fit: cover;
+        filter: saturate(0.88) contrast(0.98) brightness(1.02);
+      }
+      .polaroid-quote {
+        position: absolute;
+        bottom: -24px;
+        left: -28px;
+        background: var(--sand-50);
+        padding: 18px 22px 20px;
+        border-radius: var(--r-md);
+        box-shadow: var(--shadow-2);
+        max-width: 260px;
+        transform: rotate(2.5deg);
+        border: 1px solid var(--drift-100);
+      }
+      .polaroid-quote .q {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 400;
+        color: var(--drift-900);
+        font-size: 17px;
+        line-height: 1.3;
+      }
+      .polaroid-quote .a {
+        font-size: 12px;
+        color: var(--drift-400);
+        margin-top: 8px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .sand-sticker {
+        position: absolute;
+        top: -28px;
+        right: -12px;
+        width: 132px;
+        height: 132px;
+        border-radius: 999px;
+        background: var(--coral-500);
+        color: var(--sand-50);
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.1;
+        padding: 16px;
+        transform: rotate(8deg);
+        box-shadow: var(--shadow-2);
+        z-index: 2;
+      }
+      .sand-sticker .arrow {
+        font-family: var(--font-body);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: var(--s-10);
+        }
+        .hero-photo-frame img {
+          height: 440px;
+        }
+        .hero-stats {
+          gap: 24px;
+          flex-wrap: wrap;
+        }
+      }
+
+      /* ====== SECTIONS ====== */
+      section {
+        position: relative;
+      }
+      .section-pad {
+        padding: var(--s-24) 0;
+      }
+      @media (max-width: 900px) {
+        .section-pad {
+          padding: var(--s-16) 0;
+        }
+      }
+
+      .section-head {
+        max-width: 740px;
+        margin: 0 auto var(--s-12);
+        text-align: center;
+      }
+      .section-head p {
+        margin: 16px auto 0;
+        color: var(--drift-600);
+        font-size: var(--fs-body-lg);
+      }
+
+      /* ====== SERVICE CARDS ====== */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s-6);
+      }
+      @media (max-width: 900px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .service-card {
+        background: var(--sand-50);
+        border-radius: var(--r-lg);
+        box-shadow: var(--shadow-2);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform var(--dur-md) var(--ease-out),
+          box-shadow var(--dur-md) var(--ease-out);
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-3);
+      }
+      .service-photo {
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        background: var(--sand-200);
+      }
+      .service-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 600ms var(--ease-out);
+        filter: saturate(0.88) brightness(1.02);
+      }
+      .service-card:hover .service-photo img {
+        transform: scale(1.04);
+      }
+      .service-body {
+        padding: var(--s-8);
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-3);
+        flex: 1;
+      }
+      .service-body .eyebrow {
+        margin: 0;
+      }
+      .service-body h3 {
+        margin: 0;
+      }
+      .service-body p {
+        color: var(--drift-600);
+        font-size: 16px;
+        line-height: 1.55;
+        flex: 1;
+      }
+      .service-body .tag {
+        align-self: flex-start;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: var(--r-pill);
+        background: var(--rose-100);
+        color: var(--rose-600);
+        margin-bottom: -4px;
+      }
+      .service-body .book-link {
+        margin-top: 12px;
+        font-weight: 500;
+        color: var(--drift-900);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .service-body .book-link span {
+        color: var(--coral-500);
+      }
+
+      /* ====== PROCESS ====== */
+      .process {
+        background: var(--sand-200);
+      }
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s-8);
+        margin-top: var(--s-12);
+      }
+      @media (max-width: 900px) {
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .process-step {
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-4);
+      }
+      .process-num {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 1;
+        color: var(--coral-500);
+        letter-spacing: -0.04em;
+        margin-bottom: -8px;
+      }
+      .process-step h3 {
+        color: var(--drift-900);
+      }
+      .process-step p {
+        color: var(--drift-600);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* ====== ABOUT ====== */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: var(--s-16);
+        align-items: center;
+      }
+      @media (max-width: 900px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: var(--s-10);
+        }
+      }
+
+      .about-photo-wrap {
+        position: relative;
+      }
+      .about-photo-wrap img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        border-radius: var(--r-lg);
+        box-shadow: var(--shadow-2);
+        filter: saturate(0.88) brightness(1.02);
+      }
+      .about-photo-wrap::before {
+        content: "";
+        position: absolute;
+        inset: 24px -20px -20px 24px;
+        background: var(--sun-200);
+        border-radius: var(--r-lg);
+        z-index: -1;
+      }
+      .about-bio {
+        margin-top: 24px;
+        font-size: 19px;
+        color: var(--drift-600);
+        line-height: 1.6;
+        max-width: 560px;
+      }
+      .about-cert-label {
+        margin: 32px 0 12px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--drift-400);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .credentials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: var(--s-6);
+      }
+      .credentials .chip {
+        background: var(--sand-50);
+        border-color: var(--drift-100);
+        color: var(--drift-600);
+      }
+
+      /* ====== TESTIMONIALS ====== */
+      .testimonials {
+        background: var(--gradient-sunrise);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--s-6);
+        margin-top: var(--s-12);
+      }
+      @media (max-width: 900px) {
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .testimonial-card {
+        background: var(--sand-50);
+        border-radius: var(--r-lg);
+        padding: var(--s-10);
+        box-shadow: var(--shadow-2);
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-5);
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      .testimonial-card:nth-child(2) {
+        background: var(--rose-100);
+        border-color: var(--rose-100);
+      }
+      .testimonial-card:nth-child(3) {
+        background: var(--foam-100);
+        border-color: var(--foam-100);
+      }
+
+      .testimonial-card .q-mark {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 0.5;
+        color: var(--coral-500);
+        margin-bottom: -8px;
+        height: 32px;
+      }
+      .testimonial-card blockquote {
+        font-family: var(--font-display);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.35;
+        margin: 0;
+        color: var(--drift-900);
+        letter-spacing: -0.01em;
+      }
+      .testimonial-card .who {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: auto;
+        padding-top: var(--s-4);
+        border-top: 1px solid rgba(94, 82, 66, 0.12);
+      }
+      .testimonial-card .initial {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: var(--coral-500);
+        color: var(--sand-50);
+        display: grid;
+        place-items: center;
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 20px;
+      }
+      .testimonial-card:nth-child(2) .initial {
+        background: var(--rose-400);
+      }
+      .testimonial-card:nth-child(3) .initial {
+        background: var(--foam-500);
+      }
+      .testimonial-card .who .name {
+        font-weight: 600;
+        color: var(--drift-900);
+        font-size: 15px;
+      }
+      .testimonial-card .who .ctx {
+        font-size: 13px;
+        color: var(--drift-400);
+        margin-top: 2px;
+      }
+
+      /* ====== CONTACT ====== */
+      .contact {
+        background: var(--drift-900);
+        color: var(--sand-50);
+        position: relative;
+        overflow: hidden;
+      }
+      .contact .eyebrow {
+        color: var(--coral-300);
+      }
+      .contact h2 {
+        color: var(--sand-50);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: var(--s-16);
+        align-items: start;
+      }
+      @media (max-width: 900px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: var(--s-10);
+        }
+      }
+
+      .contact p {
+        color: rgba(251, 247, 240, 0.78);
+        font-size: 19px;
+        line-height: 1.55;
+        max-width: 540px;
+      }
+      .contact p.contact-location {
+        margin-top: 16px;
+        color: rgba(251, 247, 240, 0.55);
+        font-size: 15px;
+      }
+      .contact-intro {
+        margin-top: 24px;
+      }
+
+      .contact-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: rgba(251, 247, 240, 0.06);
+        padding: var(--s-8);
+        border-radius: var(--r-lg);
+        border: 1px solid rgba(251, 247, 240, 0.12);
+      }
+      .contact-option {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 18px;
+        background: rgba(251, 247, 240, 0.05);
+        border-radius: var(--r-md);
+        color: var(--sand-50);
+        text-decoration: none;
+        transition: background var(--dur-sm) var(--ease-out);
+        border: 1px solid transparent;
+      }
+      .contact-option:hover {
+        background: rgba(251, 247, 240, 0.1);
+        border-color: rgba(251, 247, 240, 0.15);
+      }
+      .contact-option .icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: var(--coral-500);
+        color: var(--drift-900);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+      .contact-option .label {
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .contact-option .meta {
+        font-size: 13px;
+        color: rgba(251, 247, 240, 0.6);
+        margin-top: 2px;
+      }
+      .contact-option .arrow {
+        margin-left: auto;
+        color: rgba(251, 247, 240, 0.5);
+      }
+
+      .contact::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--coral-500) 20%,
+          var(--rose-400) 50%,
+          var(--sun-400) 80%,
+          transparent
+        );
+        opacity: 0.5;
+      }
+
+      /* ====== FOOTER ====== */
+      .footer {
+        background: var(--drift-900);
+        color: rgba(251, 247, 240, 0.6);
+        padding: 40px 0 48px;
+        font-size: 14px;
+        border-top: 1px solid rgba(251, 247, 240, 0.08);
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--s-6);
+        flex-wrap: wrap;
+      }
+      .footer a {
+        color: rgba(251, 247, 240, 0.7);
+        text-decoration: none;
+      }
+      .footer a:hover {
+        color: var(--sand-50);
+      }
+      .footer-social {
+        display: flex;
+        gap: 12px;
+      }
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: rgba(251, 247, 240, 0.06);
+        transition: background var(--dur-sm) var(--ease-out);
+      }
+      .footer-social a:hover {
+        background: var(--coral-500);
+        color: var(--drift-900);
+      }
+
+      /* ====== Reveal animation ====== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity var(--dur-lg) var(--ease-out),
+          transform var(--dur-lg) var(--ease-out);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="top" class="hero">
+      <div class="sun" style="top: -140px; right: 8%" aria-hidden="true"></div>
+      <div
+        class="sun"
+        style="
+          bottom: -180px;
+          left: -5%;
+          width: 520px;
+          height: 520px;
+          opacity: 0.7;
+        "
+        aria-hidden="true"
+      ></div>
+
+      <header class="nav" id="nav">
+        <div class="container nav-inner">
+          <a href="#top" class="nav-logo">
+            <span
+              style="
+                font-family: var(--font-display);
+                font-weight: 500;
+                font-size: 22px;
+                color: var(--drift-900);
+                letter-spacing: -0.02em;
+              "
+              >emily</span
+            >
+            <span
+              style="
+                font-family: var(--font-display);
+                font-weight: 400;
+                font-style: italic;
+                font-size: 22px;
+                color: var(--rose-600);
+                letter-spacing: -0.02em;
+              "
+              >thibodeau<span style="color: var(--coral-500)">.</span></span
+            >
+          </a>
+          <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#process">How we work</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Stories</a>
+            <a href="#contact">Contact</a>
+            <a
+              class="btn btn-primary"
+              href="#contact"
+              style="font-size: 15px; padding: 12px 22px"
+              >Book a call</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <div class="container" style="padding-top: 56px">
+        <div class="hero-grid">
+          <div class="reveal visible">
+            <span class="eyebrow">Certified training · in person + online</span>
+            <h1 style="margin-top: 8px">
+              Meet me at 7am.<br />
+              <em>Bring the sunrise.</em><br />
+              We'll do the rest.
+            </h1>
+            <p class="hero-sub">
+              I'm Emily — a certified trainer for every body. Whether you're
+              chasing a PR, squeezing workouts between school runs, or
+              rebuilding after an injury, your plan is built around your body,
+              your history, and the thing you're trying to get back to.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#contact"
+                >Book a free 20-min call</a
+              >
+              <a class="btn btn-secondary" href="https://wa.me/15551234567">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 22a10 10 0 1 0-8.7-5.1L2 22l5.2-1.4A10 10 0 0 0 12 22Z"
+                  />
+                  <path
+                    d="M9 9c.3-.5.7-.5 1-.5s.5.1.8.6l.9 1.9c.1.3.1.4 0 .7l-.4.5a.4.4 0 0 0-.1.5 6 6 0 0 0 2.9 2.9.4.4 0 0 0 .5-.1l.5-.4c.3-.1.4-.1.7 0l1.9.9c.5.3.5.5.5.8 0 .3-.1.7-.5 1-.4.4-1.2.7-2.3.7-2.5 0-5-1.5-6.2-2.7s-2.7-3.7-2.7-6.2c0-1.1.3-1.9.7-2.3Z"
+                  />
+                </svg>
+                Message me on WhatsApp
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div><strong>10+ yrs</strong>specializing in recovery</div>
+              <div><strong>200+</strong>clients coached</div>
+              <div><strong>5 certs</strong>industry-recognized</div>
+            </div>
+          </div>
+          <div class="hero-photo-stack reveal visible">
+            <div class="sand-sticker" aria-hidden="true">
+              Sunrise<br />sessions<br />
+              <span class="arrow">→</span>
+            </div>
+            <div class="hero-photo-frame">
+              <img
+                src="assets/photos/emily-park-stretch.jpg"
+                alt="Emily coaching outdoors"
+              />
+            </div>
+            <div class="polaroid-quote">
+              <div class="q">"She moves at exactly my pace."</div>
+              <div class="a">— David · 61</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <svg
+        class="wave-divider"
+        viewBox="0 0 1440 48"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        style="
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          color: var(--sand-100);
+        "
+      >
+        <path
+          fill="currentColor"
+          d="M0,24 C240,48 480,0 720,16 C960,32 1200,48 1440,24 L1440,48 L0,48 Z"
+        />
+      </svg>
+    </section>
+
+    <section id="services" class="section-pad">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Ways we can work together</span>
+          <h2>Three ways in, one steady coach.</h2>
+          <p>
+            Pick what fits your week and your body. Most clients mix studio
+            training with a recovery session every few weeks — or bring me along
+            online when they travel.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-photo">
+              <img
+                src="assets/photos/emily-foam-roll-bench.jpg"
+                alt="1:1 in the studio"
+              />
+            </div>
+            <div class="service-body">
+              <span class="tag">Most booked</span>
+              <span class="eyebrow">In person · 60 min</span>
+              <h3>1:1 in the studio</h3>
+              <p>
+                An hour with me in my fully-equipped private studio. Hands-on
+                cueing, manual recovery work, and a program that changes as you
+                do. Best for clients rebuilding after injury or surgery.
+              </p>
+              <a href="#contact" class="book-link"
+                >Book this &nbsp;<span>→</span></a
+              >
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-photo">
+              <img
+                src="assets/photos/emily-park-stretch.jpg"
+                alt="Online coaching"
+              />
+            </div>
+            <div class="service-body">
+              <span class="tag">Remote</span>
+              <span class="eyebrow">Online · 45 min live</span>
+              <h3>Online coaching</h3>
+              <p>
+                We meet on video. I write your program, watch you move, adjust
+                on the fly, and check in between sessions. Great if you're not
+                local, traveling a lot, or prefer training at home.
+              </p>
+              <a href="#contact" class="book-link"
+                >Book this &nbsp;<span>→</span></a
+              >
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-photo">
+              <img
+                src="assets/photos/emily-massage-gun-back.jpg"
+                alt="Manual recovery"
+              />
+            </div>
+            <div class="service-body">
+              <span class="tag">Recovery</span>
+              <span class="eyebrow">In person · 45 min</span>
+              <h3>Manual recovery</h3>
+              <p>
+                Massage-gun work, assisted foam rolling, guided mobility. A
+                standalone session or a natural add-on to 1:1 training. Book it
+                after a hard week or before a big travel day.
+              </p>
+              <a href="#contact" class="book-link"
+                >Book this &nbsp;<span>→</span></a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process section-pad">
+      <div class="container">
+        <div class="section-head reveal" style="text-align: left; margin: 0">
+          <span class="eyebrow">How we work together</span>
+          <h2 style="max-width: 720px">A slow start, then steady waves.</h2>
+          <p style="margin: 16px 0 0; max-width: 640px">
+            Three steps, no pressure. You'll know whether this is right for you
+            before you ever pay for a session.
+          </p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-num">01</div>
+            <h3>We talk</h3>
+            <p>
+              A free 20-minute call. You tell me what's going on — the injury,
+              the pain, the thing you miss doing. I listen, ask a lot of
+              questions, and tell you honestly whether I'm the right person to
+              help.
+            </p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-num">02</div>
+            <h3>We build your plan</h3>
+            <p>
+              I write a program specifically for your body, your history, and
+              your goal. Not a template. If you've been told to 'just be
+              careful' or 'stop doing the thing you love', we start there — and
+              we work back toward it.
+            </p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-num">03</div>
+            <h3>We get to work</h3>
+            <p>
+              We train together, in the studio or online. I adjust the plan week
+              by week based on what your body is telling us. My job is to make
+              you more capable — and then to get out of your way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photo-wrap reveal">
+            <img
+              src="assets/photos/emily-box-seated.jpg"
+              alt="Emily Thibodeau"
+            />
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">About</span>
+            <h2 style="margin-top: 8px">Hi, I'm Emily.</h2>
+            <p class="about-bio">
+              I've spent over a decade coaching people of every age and ability
+              — athletes, busy parents, folks rebuilding after surgery, and
+              anyone who wants to get stronger without getting hurt. My training
+              is precise, adaptable, and stubbornly patient. The goal is always
+              the same: make you more capable in your own life.
+            </p>
+            <div class="about-cert-label">Certifications</div>
+            <div class="credentials">
+              <span class="chip"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--foam-500)"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >NASM-CPT</span
+              >
+              <span class="chip"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--foam-500)"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >Corrective Exercise Specialist</span
+              >
+              <span class="chip"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--foam-500)"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >Functional Aging Specialist</span
+              >
+              <span class="chip"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--foam-500)"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >Senior Fitness Specialist</span
+              >
+              <span class="chip"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--foam-500)"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >Pain-Free Performance</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-pad">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Postcards from clients</span>
+          <h2>People getting back to what they love.</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="q-mark">"</div>
+            <blockquote>
+              Emily is the first trainer who actually listened to me about my
+              knee. Six months in and I'm back to hiking with my grandkids.
+            </blockquote>
+            <div class="who">
+              <div class="initial">M</div>
+              <div>
+                <div class="name">Marianne</div>
+                <div class="ctx">Post-meniscus repair · 8 months</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="q-mark">"</div>
+            <blockquote>
+              She moved at exactly my pace and never once made me feel fragile.
+              I feel stronger at 61 than I did at 45.
+            </blockquote>
+            <div class="who">
+              <div class="initial">D</div>
+              <div>
+                <div class="name">David</div>
+                <div class="ctx">Chronic low-back pain · 2 years</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="q-mark">"</div>
+            <blockquote>
+              After my shoulder surgery my PT discharged me and I had no idea
+              what to do next. Emily bridged that gap. I'm back to swimming
+              laps.
+            </blockquote>
+            <div class="who">
+              <div class="initial">P</div>
+              <div>
+                <div class="name">Priya</div>
+                <div class="ctx">Post-rotator-cuff repair · 1 year</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-pad">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="reveal">
+            <span class="eyebrow">Let's talk</span>
+            <h2 style="margin-top: 8px">Start with a free 20-minute call.</h2>
+            <p class="contact-intro">
+              Tell me what's going on — the injury, the pain, the thing you miss
+              doing. I'll listen, ask questions, and tell you honestly whether
+              I'm the right person to help. No pressure, no pitch.
+            </p>
+            <p class="contact-location">
+              Based in the Bay Area. Studio sessions in person. Online coaching
+              anywhere in North America.
+            </p>
+          </div>
+          <div class="contact-options reveal">
+            <a
+              class="contact-option"
+              href="https://calendly.com/emilythibodeau"
+            >
+              <div class="icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                  <path d="M3 9h18M8 3v4M16 3v4" />
+                </svg>
+              </div>
+              <div>
+                <div class="label">Book a 20-min intro call</div>
+                <div class="meta">Calendly · free · this week</div>
+              </div>
+              <div class="arrow">→</div>
+            </a>
+            <a class="contact-option" href="https://wa.me/15551234567">
+              <div class="icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 22a10 10 0 1 0-8.7-5.1L2 22l5.2-1.4A10 10 0 0 0 12 22Z"
+                  />
+                  <path
+                    d="M9 9c.3-.5.7-.5 1-.5s.5.1.8.6l.9 1.9c.1.3.1.4 0 .7l-.4.5a.4.4 0 0 0-.1.5 6 6 0 0 0 2.9 2.9.4.4 0 0 0 .5-.1l.5-.4c.3-.1.4-.1.7 0l1.9.9c.5.3.5.5.5.8 0 .3-.1.7-.5 1-.4.4-1.2.7-2.3.7-2.5 0-5-1.5-6.2-2.7s-2.7-3.7-2.7-6.2c0-1.1.3-1.9.7-2.3Z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="label">Message me on WhatsApp</div>
+                <div class="meta">Fastest · I reply before 8pm</div>
+              </div>
+              <div class="arrow">→</div>
+            </a>
+            <a
+              class="contact-option"
+              href="mailto:emily@emilythibodeaufitness.com"
+            >
+              <div class="icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+              </div>
+              <div>
+                <div class="label">Send me a note</div>
+                <div class="meta">emily@emilythibodeaufitness.com</div>
+              </div>
+              <div class="arrow">→</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          © <span id="year"></span> Emily Thibodeau Fitness · Bay Area,
+          California
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://instagram.com/emilythibodeaufitness"
+            aria-label="Instagram"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="https://wa.me/15551234567" aria-label="WhatsApp">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 22a10 10 0 1 0-8.7-5.1L2 22l5.2-1.4A10 10 0 0 0 12 22Z"
+              />
+              <path
+                d="M9 9c.3-.5.7-.5 1-.5s.5.1.8.6l.9 1.9c.1.3.1.4 0 .7l-.4.5a.4.4 0 0 0-.1.5 6 6 0 0 0 2.9 2.9.4.4 0 0 0 .5-.1l.5-.4c.3-.1.4-.1.7 0l1.9.9c.5.3.5.5.5.8 0 .3-.1.7-.5 1-.4.4-1.2.7-2.3.7-2.5 0-5-1.5-6.2-2.7s-2.7-3.7-2.7-6.2c0-1.1.3-1.9.7-2.3Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var nav = document.getElementById("nav");
+        var onScroll = function () {
+          if (window.scrollY > 40) nav.classList.add("scrolled");
+          else nav.classList.remove("scrolled");
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        document.querySelectorAll(".reveal").forEach(function (el) {
+          io.observe(el);
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>
